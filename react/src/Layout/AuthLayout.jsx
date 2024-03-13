@@ -6,7 +6,7 @@ export default function AuthLayout() {
         <div className="sm:mx-auto sm:w-full sm:max-w-sm">
           <img
             className="w-auto mx-auto h-28"
-            src="src/assets/Logo_removebg.png"
+            src="src/assets/logo-removebg-preview.png"
             alt="Your Company"
           />
         </div>

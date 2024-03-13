@@ -20,6 +20,7 @@ export default function LoginForm() {
                   type="email"
                   autoComplete="email"
                   required
+                  autoFocus
                   placeholder="Nhập email..."
                   className="block px-2 w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                 />
@@ -52,32 +53,42 @@ export default function LoginForm() {
                     </label>       
                 </div>
                 <div className="hidden text-sm underline sm:block">                  
-                  <a href="#" className="mx-2 text-sm font-medium text-gray-700 hover:text-indigo-500">
-                    Bạn đã quên mật khẩu?
-                  </a>
+                  <Link to="/forgotpassword" className="mx-2 text-sm font-medium text-gray-700 hover:text-indigo-500">
+                      Bạn đã quên mật khẩu?
+                  </Link>
                 </div>
             </div>
                 
             <div>
               <button
                 type="submit"
-                className="flex w-full justify-center rounded-md bg-gray-700 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-gray-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+                className="w-full justify-center rounded-md bg-gray-700 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-gray-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
               >
                 ĐĂNG NHẬP
               </button>
             </div>
           </form>
-            <div className="items-center block ml-2 text-sm underline mt-9 sm:hidden">
-                <a href="#" className="font-semibold text-gray-700 hover:text-indigo-500">
-                    Quên mật khẩu?
-                </a>
+            <div>
+              <button
+                type="button"
+                className="flex mt-2 w-full justify-center rounded-md bg-white px-3 py-1.5 text-sm font-semibold leading-6 text-black shadow-sm hover:bg-gray-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 text-align: center"  >
+                <img className="h-5 mr-2" src="src/assets/google.png" alt="Google" />
+                ĐĂNG NHẬP GOOGLE
+              </button>
             </div>
-          <p className="mt-10 text-sm text-center text-gray-700">
-            Bạn chưa có tài khoản?{' '}
-            <Link to="/signup" className="font-semibold leading-6 text-gray-700 underline hover:text-indigo-500">
-              Tạo ngay tại đây
-            </Link>
-          </p>
+
+
+            <div className="items-center block ml-2 text-sm underline mt-9 sm:hidden">
+                <Link to="/forgotpassword" className="font-semibold text-gray-700 hover:text-indigo-500">
+                    Quên mật khẩu?
+                </Link>
+            </div>
+            <p className="mt-10 text-sm text-center text-gray-700">
+              Bạn chưa có tài khoản?{' '}
+              <Link to="/signup" className="font-semibold leading-6 text-gray-700 underline hover:text-indigo-500">
+                Tạo ngay tại đây
+              </Link>
+            </p>            
         </div>
       </div>
     </>
