@@ -1,8 +1,9 @@
 import React from 'react'
-import AuthLayout from './Layout/AuthLayout';
 import GuestLayout from './Layout/GuestLayout';
 import { useUserState } from './contexts/ContextProvider';
 import { Navigate } from 'react-router-dom';
+import { Header } from './components/Header';
+import Footer from './components/Footer';
 export default function App() {
         const {currentUser, userToken, setCurrentUser, setUserToken} = useUserState();
 
@@ -11,7 +12,9 @@ export default function App() {
     }
     return (
         <div className=""> 
-        <GuestLayout/>                       
+        <Header/>
+        <GuestLayout/>    
+        <Footer/>                   
         </div>
     )
 }

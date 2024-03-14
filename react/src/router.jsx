@@ -1,5 +1,4 @@
 import {createBrowserRouter} from "react-router-dom";
-import AuthLayout from "./Layout/AuthLayout";
 import SignupForm from "./Auth/SignupForm";
 import LoginForm from "./Auth/LoginForm";
 import App from "./App";
@@ -9,6 +8,7 @@ import ManagerLayout from "./Layout/ManagerLayout";
 import UserLayout from "./Layout/UserLayout";
 import StaffLayout from "./Layout/StaffLayout";
 import ForgotPassword from "./Auth/ForgotPassword";
+import AuthLayout from './Layout/AuthLayout';
 
 const router = createBrowserRouter([
   {
