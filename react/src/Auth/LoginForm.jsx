@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-
+import imageSocialGoogle from '../assets/social/google.png';
 export default function LoginForm() {
   return (
     <>
@@ -8,7 +8,7 @@ export default function LoginForm() {
             ĐĂNG NHẬP
           </h2>
         <div className="mt-5 sm:mx-auto sm:w-full sm:max-w-sm">
-          <form className="space-y-6" action="#" method="POST">
+          <form className="space-y-2" action="#" method="POST">
             <div>
               <label htmlFor="email" className="block text-sm font-medium leading-6 text-gray-700">
                 Email
@@ -28,7 +28,7 @@ export default function LoginForm() {
             </div>
 
             <div>
-              <div className="flex items-center justify-between">
+              <div className="flex items-center">
                 <label htmlFor="password" className="block text-sm font-medium leading-6 text-gray-700">
                   Mật Khẩu
                 </label>       
@@ -59,24 +59,34 @@ export default function LoginForm() {
                 </div>
             </div>
                 
-            <div>
+            {/* <div>
               <button
                 type="submit"
                 className="w-full justify-center rounded-md bg-gray-700 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-gray-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
               >
                 ĐĂNG NHẬP
               </button>
-            </div>
+            </div> */}
+             <div class="">
+                  <button type="submit" class="items-center justify-center w-full px-6 py-2.5 mt-4 text-center text-white font-semibold duration-200 bg-black border-2 border-black rounded-full nline-flex hover:bg-transparent hover:border-black hover:text-black focus:outline-none focus-visible:outline-black text-sm focus-visible:ring-black">                    
+                        ĐĂNG NHẬP
+                  </button>
+              </div>
           </form>
-            <div>
+            {/* <div>
               <button
                 type="button"
                 className="flex mt-2 w-full justify-center rounded-md bg-white px-3 py-1.5 text-sm font-semibold leading-6 text-black shadow-sm hover:bg-gray-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 text-align: center"  >
                 <img className="h-5 mr-2" src="src/assets/google.png" alt="Google" />
                 ĐĂNG NHẬP GOOGLE
               </button>
-            </div>
-
+            </div> */}
+              <div class="mt-4">
+                  <button class="flex items-center justify-center w-full px-6 py-2.5 text-center font-semibold text-black duration-200 bg-white border-2 border-white rounded-full nline-flex hover:bg-transparent hover:border-black hover:text-black focus:outline-none focus-visible:outline-black text-sm focus-visible:ring-black">
+                    <img className="h-5 mr-2" src={imageSocialGoogle} alt="Google" />
+                        ĐĂNG NHẬP GOOGLE
+                  </button>
+              </div>
 
             <div className="items-center block ml-2 text-sm underline mt-9 sm:hidden">
                 <Link to="/forgotpassword" className="font-semibold text-gray-700 hover:text-indigo-500">

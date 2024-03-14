@@ -13,7 +13,7 @@ import ForgotPassword from "./Auth/ForgotPassword";
 const router = createBrowserRouter([
   {
     // guest
-    path: '/guest',
+    path: '/',
     element: <App />,
     children:[
       {

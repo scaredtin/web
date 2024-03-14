@@ -78,14 +78,19 @@ export default function SignupForm() {
               </div>
             </div>
                 
-            <div>
+            {/* <div>
               <button
                 type="submit"
                 className="flex mt-8 w-full justify-center rounded-md bg-gray-700 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-gray-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
               >
                 ĐĂNG KÝ
               </button>
-            </div>
+            </div> */}
+             <div class="">
+                  <button type="submit" class="mt-6 items-center justify-center w-full px-6 py-2.5 text-center font-semibold text-white duration-200 bg-black border-2 border-black rounded-full nline-flex hover:bg-transparent hover:border-black hover:text-black focus:outline-none focus-visible:outline-black text-sm focus-visible:ring-black">                    
+                        ĐĂNG KÝ
+                  </button>
+              </div>
           </form>
             {/* <div className="items-center block ml-2 text-sm underline mt-9 sm:hidden">
                 <a href="#" className="font-semibold text-gray-700 hover:text-indigo-500">
