@@ -10,7 +10,7 @@ return (
             src={imagelogo}
             alt="logo shop"
           /> */}
-      <div className="block bg-red-500 h-1/4 sm:hidden">
+      <div className="block bg-red-500 h-1/3 sm:hidden">
         <img
             className="block w-auto h-40 mx-auto sm:hidden"
             src={imagelogo}
