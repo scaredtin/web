@@ -10,7 +10,7 @@ return (
             src={imagelogo}
             alt="logo shop"
           /> */}
-      <div className="block bg-red-500 h-1/3">
+      <div className="block bg-red-500 h-1/3 sm:hidden">
         <img
             className="block w-auto h-40 mx-auto sm:hidden"
             src={imagelogo}
@@ -97,14 +97,14 @@ return (
                     ĐĂNG NHẬP GOOGLE
                 </button>
             </div>
-            
+
+
             <p className="mt-10 text-sm text-center text-gray-700">
                 Bạn chưa có tài khoản?{' '}
                 <Link to="/signup" className="font-semibold leading-6 text-gray-700 underline hover:text-indigo-500">
                 Tạo ngay tại đây
                 </Link>
             </p>
-
         </div>
     </div>
 </>

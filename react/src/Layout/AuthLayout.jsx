@@ -20,7 +20,7 @@ export default function AuthLayout() {
               H & D
           </h2>
           <h5 className="hidden mt-5 text-xl font-bold leading-9 tracking-tight text-center text-gray-900 uppercase sm:block">
-              Cửa hàng thời trang theo <br /> xu hướng 2024
+              Cửa hàng thời trang <br /> xu hướng 2024
           </h5>
         </div>
         

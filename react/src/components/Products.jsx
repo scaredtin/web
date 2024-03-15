@@ -55,6 +55,7 @@ const products = [
     imageSrc: 'https://img.lazcdn.com/g/p/2b6a3535054ea5fca71d2825f61e7ece.jpg_720x720q80.jpg_.webp',
     imageAlt: 'Hand holding black machined steel mechanical pencil with brass tip and top.',
   },
+  
   // More products...
 ]
 
@@ -62,7 +63,13 @@ const products = [
 export default function Products() {
   return (
      <div className="bg-white">
-      <div className="max-w-2xl mx-auto sm:px-6 sm:py-12 lg:max-w-7xl lg:px-2">
+      <div className="max-w-2xl p-2 mx-auto sm:px-6 sm:py-12 lg:max-w-7xl lg:px-2 sm:block">
+         <h2 className="hidden p-2 text-3xl font-bold leading-9 tracking-tight text-gray-900 uppercase sm:block">
+            SẢN PHẨM MỚI NHẤT
+        </h2>
+        <h2 className="block p-4 text-3xl font-bold leading-9 text-center text-gray-900 uppercase sm:hidden">
+            SẢN PHẨM MỚI NHẤT
+        </h2>
         <div className="grid grid-cols-2 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 xl:gap-x-8">
           {products.map((product) => (
             <Link key={product.id} to={product.href} className="group">

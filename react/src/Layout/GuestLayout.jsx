@@ -3,7 +3,7 @@ import Products from '../components/Products';
 
 export default function GuestLayout() {
   return (
-    <div>  
+    <div className=''>  
       <Products/>
     </div>
   )
