@@ -4,6 +4,8 @@ import { useUserState } from './contexts/ContextProvider';
 import { Navigate } from 'react-router-dom';
 import { Header } from './components/Header';
 import Footer from './components/Footer';
+import Banner from './components/Banner';
+
 export default function App() {
         const {currentUser, userToken, setCurrentUser, setUserToken} = useUserState();
 
@@ -12,6 +14,7 @@ export default function App() {
     }
     return (
         <div className=""> 
+        <Banner/>
         <Header/>
         <GuestLayout/>    
         <Footer/>                   
