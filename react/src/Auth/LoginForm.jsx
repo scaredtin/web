@@ -78,7 +78,8 @@ return (
                 </div> */}
                 <div className="">
                     <button type="submit"
-                        className="items-center w-full bg-black px-6 py-2.5 mt-4 text-center text-white font-semibold duration-200 border-2 border-black rounded-full hover:bg-transparent hover:border-black hover:text-black focus:outline-none focus-visible:outline-black text-sm focus-visible:ring-black transition transform hover:-translate-y-0.5">
+                        className="items-center w-full bg-black px-6 py-2.5 mt-4 text-center text-white font-semibold duration-200 border-2 border-black rounded-full hover:bg-transparent hover:border-black hover:text-black focus:outline-none focus-visible:outline-black text-sm focus-visible:ring-black 
+                        transition transform hover:-translate-y-0.5">
                         ĐĂNG NHẬP
                     </button>
                 </div>
