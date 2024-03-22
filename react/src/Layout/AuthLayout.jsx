@@ -4,9 +4,8 @@ import imagelogo from '../assets/logo/logo-removebg-preview.png';
 export default function AuthLayout() {
     const {currentUser, userToken} = useUserState();
 
-    if(userToken){
-        return <Navigate to="/"/>
-    }
+    if(userToken){ return <Navigate to="/"/>}
+
   return (
     <>
       <div className="flex bg-orange-100 sm:flex lg:px-8">       

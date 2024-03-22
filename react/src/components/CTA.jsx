@@ -9,7 +9,7 @@ const Cta3 = () => {
                         <p className="text-3xl font-semibold leading-9 text-gray-800 xl:text-4xl">Xin chào</p>
                     </div>
                     <div className="mt-4 lg:w-4/5 xl:w-3/5">
-                        <p className="text-base leading-6 text-gray-600">
+                        <p className="text-base leading-7 text-gray-600">
                             Cảm ơn bạn đã ghé thăm cửa hàng của chúng tôi. Hãy xem những sản phẩm mà chúng tôi có và có thể bạn sẽ thích nó.</p>
                     </div>
                     <div className="w-full mt-16">

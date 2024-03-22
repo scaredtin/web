@@ -1,5 +1,14 @@
 import React from "react";
 import imagelogo from '../assets/logo/logo-removebg-preview.png';
+import svgProducts from '../assets/icon/products.svg';
+import svgSale from '../assets/icon/sale.svg';
+import svgShirt from '../assets/icon/shirt.svg';
+import svgTrouser from '../assets/icon/trouser.svg';
+import svgBalo from '../assets/icon/balo.svg';
+import svgHat from '../assets/icon/hat.svg';
+import svgSocks from '../assets/icon/socks.svg';
+import svgSandals from '../assets/icon/sandals.png';
+import svgSport from '../assets/icon/soccer-sport.svg';
 import {
   Navbar,
   Collapse,
@@ -13,69 +22,54 @@ import {
   MenuList,
   MenuItem,
 } from "@material-tailwind/react";
-import {
-  ChevronDownIcon,
-  Bars3Icon,
-  XMarkIcon,
-} from "@heroicons/react/24/outline";
-import {
-  Bars4Icon,
-  GlobeAmericasIcon,
-  NewspaperIcon,
-  PhoneIcon,
-  RectangleGroupIcon,
-  SquaresPlusIcon,
-  SunIcon,
-  TagIcon,
-  UserGroupIcon,
-} from "@heroicons/react/24/solid";
+
 import { Link } from "react-router-dom";
  
 const navListMenuItems = [
   {
-    title: "Products",
+    title: "Tất cả sản phẩm",
     description: "Find the perfect solution for your needs.",
-    icon: SquaresPlusIcon,
+    icon: svgProducts,
   },
   {
-    title: "About Us",
+    title: "Giảm giá",
+    description: "Find the perfect solution for your needs.",
+    icon: svgSale,
+  },
+  {
+    title: "Áo",
     description: "Meet and learn about our dedication",
-    icon: UserGroupIcon,
+    icon: svgShirt,
   },
   {
-    title: "Blog",
+    title: "Quần",
     description: "Find the perfect solution for your needs.",
-    icon: Bars4Icon,
+    icon: svgTrouser,
   },
   {
-    title: "Services",
+    title: "Balo",
     description: "Learn how we can help you achieve your goals.",
-    icon: SunIcon,
+    icon: svgBalo,
   },
   {
-    title: "Support",
+    title: "Nón",
     description: "Reach out to us for assistance or inquiries",
-    icon: GlobeAmericasIcon,
+    icon: svgHat,
   },
   {
-    title: "Contact",
+    title: "Vớ",
     description: "Find the perfect solution for your needs.",
-    icon: PhoneIcon,
+    icon: svgSocks,
   },
   {
-    title: "News",
+    title: "Sandals",
     description: "Read insightful articles, tips, and expert opinions.",
-    icon: NewspaperIcon,
+    icon: svgSandals,
   },
   {
-    title: "Products",
-    description: "Find the perfect solution for your needs.",
-    icon: RectangleGroupIcon,
-  },
-  {
-    title: "Special Offers",
+    title: "Đồ thể thao",
     description: "Explore limited-time deals and bundles",
-    icon: TagIcon,
+    icon: svgSport,
   },
 ];
  
@@ -88,16 +82,17 @@ function NavListMenu() {
         <MenuItem className="flex items-center gap-3 rounded-lg">
           <div className="flex items-center justify-center rounded-lg !bg-blue-gray-50 p-2 ">
             {" "}
-            {React.createElement(icon, {
+            {/* {React.createElement(icon, {
               strokeWidth: 2,
               className: "h-6 text-gray-900 w-6",
-            })}
+            })} */}
+            <img src={icon} alt="" className="w-6 h-6 text-gray-900" />
           </div>
           <div>
             <Typography
-              variant="h6"
+              variant="h3"
               color="blue-gray"
-              className="flex items-center text-sm font-bold"
+              className="flex items-center text-lg font-bolgg"
             >
               {title}
             </Typography>
@@ -130,18 +125,28 @@ function NavListMenu() {
               onClick={() => setIsMobileMenuOpen((cur) => !cur)}
             >
               SẢN PHẨM
-              <ChevronDownIcon
+              {/* <ChevronDownIcon
                 strokeWidth={2.5}
                 className={`hidden h-3 w-3 transition-transform lg:block ${
                   isMenuOpen ? "rotate-180" : ""
                 }`}
-              />
-              <ChevronDownIcon
+              /> */}
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className={`hidden h-3 w-3 transition-transform lg:block ${
+                  isMenuOpen ? "rotate-180" : ""
+                }`}>
+                <path fillRule="evenodd" d="M12.53 16.28a.75.75 0 0 1-1.06 0l-7.5-7.5a.75.75 0 0 1 1.06-1.06L12 14.69l6.97-6.97a.75.75 0 1 1 1.06 1.06l-7.5 7.5Z" clipRule="evenodd" />
+              </svg>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className={`block h-3 w-3 transition-transform lg:hidden ${
+                  isMobileMenuOpen ? "rotate-180" : ""
+                }`}>
+                <path fillRule="evenodd" d="M12.53 16.28a.75.75 0 0 1-1.06 0l-7.5-7.5a.75.75 0 0 1 1.06-1.06L12 14.69l6.97-6.97a.75.75 0 1 1 1.06 1.06l-7.5 7.5Z" clipRule="evenodd" />
+              </svg>
+              {/* <ChevronDownIcon
                 strokeWidth={2.5}
                 className={`block h-3 w-3 transition-transform lg:hidden ${
                   isMobileMenuOpen ? "rotate-180" : ""
                 }`}
-              />
+              /> */}
             </ListItem>
           </Typography>
         </MenuHandler>
@@ -164,8 +169,8 @@ function NavList() {
     <List className="p-0 mt-4 mb-6 lg:mt-0 lg:mb-0 lg:flex-row lg:p-1">
        <Link to="/user">
         <Typography
-          as="a"
-          href="#"
+          // as="a"
+          // href="#"
           variant="h5"
           color="blue-gray"
           className="font-bold"
@@ -185,8 +190,8 @@ function NavList() {
       </Typography>
       </Link>
       <Typography
-        as="a"
-        href="#"
+        // as="a"
+        // href="#"
         variant="h5"
         color="blue-gray"
         className="flex font-bold"
@@ -197,8 +202,8 @@ function NavList() {
       <NavListMenu />
       {/*  */}
       <Typography
-        as="a"
-        href="#"
+        // as="a"
+        // href="#"
         variant="h5"
         color="blue-gray"
         className="font-semibold"
@@ -292,9 +297,16 @@ export function Header() {
           onClick={() => setOpenNav(!openNav)}
         >
           {openNav ? (
-            <XMarkIcon className="w-6 h-6" strokeWidth={2} />
+            // <XMarkIcon className="w-6 h-6" strokeWidth={2} />
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-6 h-6">
+              <path fillRule="evenodd" d="M5.47 5.47a.75.75 0 0 1 1.06 0L12 10.94l5.47-5.47a.75.75 0 1 1 1.06 1.06L13.06 12l5.47 5.47a.75.75 0 1 1-1.06 1.06L12 13.06l-5.47 5.47a.75.75 0 0 1-1.06-1.06L10.94 12 5.47 6.53a.75.75 0 0 1 0-1.06Z" clipRule="evenodd" />
+            </svg>
           ) : (
-            <Bars3Icon className="w-6 h-6" strokeWidth={2} />
+            // <Bars3Icon className="w-6 h-6" strokeWidth={2} />
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-6 h-6">
+              <path fillRule="evenodd" d="M3 6.75A.75.75 0 0 1 3.75 6h16.5a.75.75 0 0 1 0 1.5H3.75A.75.75 0 0 1 3 6.75ZM3 12a.75.75 0 0 1 .75-.75h16.5a.75.75 0 0 1 0 1.5H3.75A.75.75 0 0 1 3 12Zm0 5.25a.75.75 0 0 1 .75-.75h16.5a.75.75 0 0 1 0 1.5H3.75a.75.75 0 0 1-.75-.75Z" clipRule="evenodd" />
+            </svg>
+
           )}
         </IconButton>
       </div>
@@ -311,7 +323,7 @@ export function Header() {
                   <path fillRule="evenodd" d="M7.5 6a4.5 4.5 0 1 1 9 0 4.5 4.5 0 0 1-9 0ZM3.751 20.105a8.25 8.25 0 0 1 16.498 0 .75.75 0 0 1-.437.695A18.683 18.683 0 0 1 12 22.5c-2.786 0-5.433-.608-7.812-1.7a.75.75 0 0 1-.437-.695Z" clipRule="evenodd" />
               </svg>
           </button>
-        </Link> 
+         </Link> 
 
          <Link to="/products">
             <button
@@ -322,7 +334,7 @@ export function Header() {
                 <path fillRule="evenodd" d="M7.5 6v.75H5.513c-.96 0-1.764.724-1.865 1.679l-1.263 12A1.875 1.875 0 0 0 4.25 22.5h15.5a1.875 1.875 0 0 0 1.865-2.071l-1.263-12a1.875 1.875 0 0 0-1.865-1.679H16.5V6a4.5 4.5 0 1 0-9 0ZM12 3a3 3 0 0 0-3 3v.75h6V6a3 3 0 0 0-3-3Zm-3 8.25a3 3 0 1 0 6 0v-.75a.75.75 0 0 1 1.5 0v.75a4.5 4.5 0 1 1-9 0v-.75a.75.75 0 0 1 1.5 0v.75Z" clipRule="evenodd" />
               </svg>
             </button>
-        </Link>
+         </Link>
         </div>
          
         <div className="items-center w-full gap-2 flex-nowrap lg:hidden">

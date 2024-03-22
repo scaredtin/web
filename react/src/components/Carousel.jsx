@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { CarouselProvider, Slider, Slide, ButtonBack, ButtonNext } from "pure-react-carousel";
 import "pure-react-carousel/dist/react-carousel.es.css";
 
@@ -9,7 +9,7 @@ export default function CarouselTUK() {
         <div className="container mx-auto">
             <div className="flex items-center justify-center w-full h-full px-4 py-24 sm:py-8">
                 {/* Carousel for desktop and large size devices */}
-                <CarouselProvider className="hidden lg:block" naturalSlideWidth={100} isIntrinsicHeight={true} totalSlides={12} visibleSlides={4} step={1} infinite={true}>
+                <CarouselProvider className="hidden lg:block" naturalSlideWidth={100} isIntrinsicHeight={true} totalSlides={12} visibleSlides={4} step={2} infinite={true}>
                     <div className="relative flex items-center justify-center w-full">
                         <ButtonBack role="button" aria-label="slide backward" className="absolute left-0 z-30 ml-8 cursor-pointer focus:outline-none focus:bg-gray-400 focus:ring-2 focus:ring-offset-2 focus:ring-gray-400" id="prev">
                             <svg width={8} height={14} viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -19,7 +19,7 @@ export default function CarouselTUK() {
                         <div className="w-full h-full mx-auto overflow-x-hidden overflow-y-hidden">
                             <Slider>
                                 <div id="slider" className="flex items-center justify-start h-full transition duration-700 ease-out lg:gap-8 md:gap-6 gap-14">
-                                    <Slide index={0}>
+                                    <Slide index={0} >
                                         <div className="relative flex flex-shrink-0 w-full sm:w-auto">
                                             <img src="https://mcdn2.coolmate.me/cdn-cgi/image/width=672,height=990,quality=85/uploads/January2024/AT.220.xd.8_75.jpg" alt="black chair and white table" className="object-cover object-center w-full" />
                                             <div className="absolute w-full h-full p-6 bg-gray-800 bg-opacity-30">
@@ -32,11 +32,11 @@ export default function CarouselTUK() {
                                     </Slide>
                                     <Slide index={1}>
                                         <div className="relative flex flex-shrink-0 w-full sm:w-auto">
-                                            <img src="https://mcdn2.coolmate.me/cdn-cgi/image/width=672,height=990,quality=85/uploads/January2024/AT.220.xd.8_75.jpg" alt="sitting area" className="object-cover object-center w-full" />
+                                            <img src="https://pos.nvncdn.com/04f7ff-92233/ps/20221128_0RLXJ5EUVhVHmiQVwkkY6G1w.jpg" alt="sitting area" className="object-fill object-center w-full w-300 h-500" />
                                             <div className="absolute w-full h-full p-6 bg-gray-800 bg-opacity-30">
-                                                <h2 className="text-base leading-4 text-white lg:text-xl lg:leading-5">Catalog 2</h2>
+                                                <h2 className="text-base leading-4 text-white lg:text-xl lg:leading-5">2000$</h2>
                                                 <div className="flex items-end h-full pb-6">
-                                                    <h3 className="text-xl font-semibold leading-5 text-white lg:text-2xl lg:leading-6">Minimal Interior</h3>
+                                                    <h3 className="text-xl font-semibold leading-5 text-white lg:text-2xl lg:leading-6">Em sinh viên năm cuối</h3>
                                                 </div>
                                             </div>
                                         </div>

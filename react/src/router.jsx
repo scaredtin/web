@@ -6,7 +6,7 @@ import AdminLayout from "./Layout/admin/AdminLayout";
 import GuestLayout from "./Layout/GuestLayout";
 import ManagerLayout from "./Layout/admin/ManagerLayout";
 import UserLayout from "./Layout/UserLayout";
-import StaffLayout from "./Layout/StaffLayout";
+import StaffLayout from "./Layout/admin/StaffLayout";
 import ForgotPassword from "./Auth/ForgotPassword";
 import AuthLayout from './Layout/AuthLayout';
 import ProductsFilter from "./pages/ProductsFilter";
@@ -55,7 +55,7 @@ const router = createBrowserRouter([
   },   
   // admin
   {
-    path: '/admin',
+    path: 'admin',
     element: <AdminLayout />,
     children:[
       {
